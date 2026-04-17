@@ -9,6 +9,15 @@ import pytest
                               ([1,10,8,5.5,3,7,6.7,7.6,3 ], 5,9),
                               ([0,0,0], 0),
                               ([10,10,10],10)
-                         ])
+                         ],
+                         ids={
+                             "3 notas inteiras",
+                             "3 notas decimais", 
+                             "notas inteira e decimais", 
+                             "apenas 1 nota",
+                             "varias notas",
+                             "menor nota",
+                             "maior nota" 
+                         })
 def test_boletim_happy_patch(notas, esperado):
     assert calcular_media (notas) == esperado
